@@ -21,10 +21,10 @@ const Sidebar = () => {
         <NavLink exact to="/discover" className="item" activeClassName="active">
           <span>Discover</span>
         </NavLink>
-
+        {/* 
         <NavLink exact to="/radio" className="item" activeClassName="active">
           <span>Radio</span>
-        </NavLink>
+        </NavLink> */}
 
         <NavLink exact to="/foryou" className="item" activeClassName="active">
           <span>For you</span>

@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import "./Toggle.css";
 
 const ToogleTheme = () => {
-  const [currentTheme, setTheme] = useState("dark");
+  const [currentTheme, setTheme] = useState("light");
 
   function handleToggleTheme() {
-    let posX = 0;
+    let posX = 25;
     if (currentTheme === "light") {
-      posX = 0;
+      posX = 25;
       setTheme("dark");
     } else {
-      posX = 25;
+      posX = 0;
       setTheme("light");
     }
     document.getElementById(

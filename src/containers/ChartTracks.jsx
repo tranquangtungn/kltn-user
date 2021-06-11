@@ -24,7 +24,7 @@ class ChartTracks extends Component {
           {error && <span>{error}</span>}
           <h1>Top Songs</h1>
           <section className="top-songs-container">
-            {tracks.data.slice(0, 6).map((track) => (
+            {tracks.data.slice(0, 6)?.map((track) => (
               <CardSong key={track.id} song={track} />
             ))}
           </section>

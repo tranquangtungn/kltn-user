@@ -71,7 +71,7 @@ class ChartAlbums extends Component {
           <section>
             <div className="slider">
               <div className="items-slider" id="carousel-top-albums">
-                {albums.data.map((album) => (
+                {albums.data?.map((album) => (
                   <CardAlbum key={album.id} album={album} />
                 ))}
               </div>

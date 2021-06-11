@@ -20,6 +20,7 @@ import SingleArtist from "../pages/SingleArtistPage";
 import SingleAlbum from "../containers/SingleAlbum";
 import SingleRadio from "../pages/SingleRadioPage";
 import SingleGenre from "../pages/SingleGenre";
+
 // Others
 import Error from "../pages/Error";
 import store from "../state/store";
@@ -28,6 +29,7 @@ import FavoriteMobilePage from "../pages/FavoritesMobilePage";
 import "./App.css";
 
 function App() {
+
   return (
     <React.Fragment>
       <div className="App">
@@ -36,6 +38,7 @@ function App() {
           <SearchBar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
+
             <Route exact path="/discover" component={Discover}></Route>
             <Route exact path="/radio" component={Radio}></Route>
             <Route exact path="/foryou" component={ForYou}></Route>
