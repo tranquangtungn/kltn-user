@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9f9ae3a0.chunk.css",
+    "main.js": "/static/js/main.715d4b9d.chunk.js",
+    "main.js.map": "/static/js/main.715d4b9d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.cb91ee66.js",
+    "runtime-main.js.map": "/static/js/runtime-main.cb91ee66.js.map",
+    "static/js/2.067cddeb.chunk.js": "/static/js/2.067cddeb.chunk.js",
+    "static/js/2.067cddeb.chunk.js.map": "/static/js/2.067cddeb.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.36eec0754472bb940d0c2e4fa9415d8b.js": "/precache-manifest.36eec0754472bb940d0c2e4fa9415d8b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.9f9ae3a0.chunk.css.map": "/static/css/main.9f9ae3a0.chunk.css.map",
+    "static/js/2.067cddeb.chunk.js.LICENSE.txt": "/static/js/2.067cddeb.chunk.js.LICENSE.txt",
+    "static/media/Man_Construction_Worker.png": "/static/media/Man_Construction_Worker.f68562f9.png",
+    "static/media/bgpc.jpg": "/static/media/bgpc.1066af7a.jpg",
+    "static/media/female-singer_bowie.png": "/static/media/female-singer_bowie.85797fa7.png",
+    "static/media/female-singer_prince.png": "/static/media/female-singer_prince.40fee929.png",
+    "static/media/male-singer_bowie.png": "/static/media/male-singer_bowie.3c07eaf2.png",
+    "static/media/male-singer_prince.png": "/static/media/male-singer_prince.8022fd28.png",
+    "static/media/multiple-musical-notes.png": "/static/media/multiple-musical-notes.d4a67532.png",
+    "static/media/PopularGenres.css": "/static/media/popular-genres.6ded9f25.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb91ee66.js",
+    "static/js/2.067cddeb.chunk.js",
+    "static/css/main.9f9ae3a0.chunk.css",
+    "static/js/main.715d4b9d.chunk.js"
+  ]
+}
