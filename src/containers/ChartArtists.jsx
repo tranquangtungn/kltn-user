@@ -23,7 +23,7 @@ class ChartArtists extends Component {
           {error && <span>{error}</span>}
           <h1>Featured Artists</h1>
           <div className="featured-artists">
-            {artists.data.map((artist) => (
+            {artists?.data.map((artist) => (
               <Card key={artist.id} artist={artist} />
             ))}
           </div>

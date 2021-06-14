@@ -5,9 +5,9 @@ import "./Card.css";
 const Card = ({ artist }) => {
   return (
     <Link to={`/artist/${artist.id}`} className="card">
-      <img className="blur" src={artist.picture_small} alt={artist.name} />
-      <img className="pic" src={artist.picture_medium} alt={artist.name} />
-      <span>{artist.name}</span>
+      <img className="blur" src={artist.avatar} alt={artist.namenosign} />
+      <img className="pic" src={artist.avatar} alt={artist.namenosign} />
+      <span>{artist.namenosign}</span>
     </Link>
   );
 };

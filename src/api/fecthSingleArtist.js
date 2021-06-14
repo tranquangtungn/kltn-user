@@ -8,7 +8,7 @@ import {
 export default function fetchSingleArtist(id) {
     return (dispatch) => {
         dispatch(actionSingleArtistPending());
-        fetch(`/artist/${id}`)
+        fetch(`/singers/${id}`)
             // fetch(`/artist/${id}`)
             .then((res) => res.json())
             .then((res) => {

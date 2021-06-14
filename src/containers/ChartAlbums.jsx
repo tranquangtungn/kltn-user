@@ -64,15 +64,15 @@ class ChartAlbums extends Component {
               <FontAwesomeIcon
                 icon={faChevronRight}
                 className="arrow"
-                onClick={this.handleRight.bind(this, albums.total)}
+                onClick={this.handleRight.bind(this, albums?.total)}
               />
             </div>
           </div>
           <section>
             <div className="slider">
               <div className="items-slider" id="carousel-top-albums">
-                {albums.data?.map((album) => (
-                  <CardAlbum key={album.id} album={album} />
+                {albums?.data.map((album) => (
+                  <CardAlbum key={album._id} album={album} />
                 ))}
               </div>
             </div>

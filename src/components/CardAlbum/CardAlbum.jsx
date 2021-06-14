@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 const CardAlbum = ({ album }) => {
   return (
-    <Link to={`/album/${album.id}`} className="album">
-      <img src={album.cover_medium} alt={album.title} className="card-album" />
-      <p className="Album-Title">{album.title}</p>
+    <Link to={`/album/${album._id}`} className="album">
+      <img src={album.background} alt={album.albumname} className="card-album" />
+      <p className="Album-Title">{album.albumname}</p>
       {/* <p>{album.year}</p> */}
     </Link>
   );
