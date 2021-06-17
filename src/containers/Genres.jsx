@@ -23,7 +23,7 @@ class Genres extends Component {
           {genres.items.slice(1, genres.items.length).map((genre) => (
             <StandarCard
               text={genre.typename}
-              //pic={genre.picture_big} 
+              pic={genre.background}
               url={`/genre/${genre._id}`}
             />
           ))}

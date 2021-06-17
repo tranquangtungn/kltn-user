@@ -23,8 +23,8 @@ class ArtistsByGenre extends Component {
           {error && <span>{error}</span>}
           <h1>Artists</h1>
           <div className="featured-artists">
-            {artists.data.map((artist) => (
-              <Card key={artist.id} artist={artist} />
+            {artists.data?.map((artist) => (
+              <Card key={artist._id} artist={artist} />
             ))}
           </div>
         </React.Fragment>
