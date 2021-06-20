@@ -22,6 +22,7 @@ class Genres extends Component {
         <div className="genres-section">
           {genres.items.slice(0, genres.items.length).map((genre) => (
             <StandarCard
+              key={genre._id}
               text={genre.typename}
               pic={genre.background}
               url={`/genre/${genre._id}`}

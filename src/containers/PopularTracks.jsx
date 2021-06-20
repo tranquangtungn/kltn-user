@@ -28,7 +28,7 @@ class PopularTracks extends Component {
         <h2>Popular</h2>
 
         <section className="top-songs-container">
-          {tracks.data.map((track) => (
+          {tracks.data?.map((track) => (
             <CardSong key={track.id} song={track} />
           ))}
         </section>

@@ -76,7 +76,7 @@ class RelatedArtists extends Component {
         <section>
           <div className="slider">
             <div className="items-slider" id="carousel-related">
-              {related.data.map((artist) => (
+              {related.data?.map((artist) => (
                 <Card key={artist.id} artist={artist} />
               ))}
             </div>
