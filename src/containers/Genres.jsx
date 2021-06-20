@@ -20,7 +20,7 @@ class Genres extends Component {
       <React.Fragment>
         <h1>Genres</h1>
         <div className="genres-section">
-          {genres.items.slice(1, genres.items.length).map((genre) => (
+          {genres.items.slice(0, genres.items.length).map((genre) => (
             <StandarCard
               text={genre.typename}
               pic={genre.background}
