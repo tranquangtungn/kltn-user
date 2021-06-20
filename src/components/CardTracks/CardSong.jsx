@@ -5,22 +5,22 @@ import convertDurationTrack from "../../core/functions/convertDurationTrack";
 import PlayButton from "../Buttons/PlayButton";
 import HeartButton from "../Buttons/HeartButton";
 
-const CardSong = ({ song }) => {
+const CardSong = ({ song, artist }) => {
   return (
     <div className="container-song">
       <div className="cover-container">
-        <img src={song.album.cover_small} alt={song.title} />
+        <img src={song.background} alt={song.title} />
       </div>
       <div className="info-container">
-        <span>{song.title_short}</span>
+        <span>{song.trackname}</span>
         <div className="contributors">
-          <p key={song.artist.id} className="track-artist">
-            {song.artist.name}
+          <p className="track-artist">
+            {artist}
           </p>
         </div>
       </div>
       <p className="duration">{convertDurationTrack(song.duration)}</p>
-      <PlayButton url={song.preview} />
+      <PlayButton url={song.tracklink} />
       <HeartButton track={song} />
     </div>
   );

@@ -28,8 +28,8 @@ class PopularTracks extends Component {
         <h2>Popular</h2>
 
         <section className="top-songs-container">
-          {tracks.data?.map((track) => (
-            <CardSong key={track.id} song={track} />
+          {tracks.items.tracks?.map((track) => (
+            <CardSong key={track._id} song={track} artist={tracks.items.name} />
           ))}
         </section>
       </React.Fragment>

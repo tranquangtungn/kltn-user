@@ -28,9 +28,9 @@ class Title extends Component {
     if (loading) return <Loading />;
     return (
       <div className="header-artist">
-        <img src={artist.picture_medium} alt={artist.name} />
+        <img src={artist.items.avatar} alt={artist.items.name} />
         <div className="artist-info">
-          <h1>{artist.name}</h1>
+          <h1>{artist.items.name}</h1>
           <p>{convertNumber(artist.nb_fan)} Fans</p>
           <FollowButton artist={artist} />
         </div>
