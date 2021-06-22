@@ -28,18 +28,18 @@ class SingleAlbum extends Component {
     return (
       <div className="container-right">
         <header>
-          <img src={album.cover_medium} alt={album.title} />
+          <img src={album.items.background} alt={album.items.albumname} />
           <section className="info">
-            <h1>{album.title}</h1>
+            <h1>{album.items.albumname}</h1>
             <div className="tags-genres">
-              {album.genres.data.map((genre) => (
+              {album.genres?.data?.map((genre) => (
                 <Link to={`/genre/${genre.id}`}>
                   <p key={genre.id}>{genre.name}</p>
                 </Link>
               ))}
             </div>
             <div className="details">
-              <p>{album.nb_tracks} Songs</p>
+              <p>{album.items.tracks.count} Songs</p>
               <p id="dot">&bull;</p>
               <p>{convertDurationAlbum(album.duration)}</p>
             </div>
@@ -57,20 +57,20 @@ class SingleAlbum extends Component {
             </tr>
           </thead>
           <tbody>
-            {album.tracks.data.map((track, index) => (
-              <tr key={track.id}>
+            {album.items.tracks.map((track, index) => (
+              <tr key={track._id}>
                 <td>{index + 1}</td>
                 <td>
-                  <p>{track.title}</p>
+                  <p>{track.trackname}</p>
                 </td>
                 <td className="duration-field">
                   {convertDurationTrack(track.duration)}
                 </td>
                 <td>
-                  <PlayButton url={track.preview} />
+                  <PlayButton url={track.tracklink} />
                 </td>
                 <td>
-                  <HeartButton track={addProperty(track, album.cover_small)} />
+                  <HeartButton track={addProperty(track, track.background)} />
                 </td>
               </tr>
             ))}

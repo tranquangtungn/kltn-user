@@ -24,8 +24,8 @@ class ChartTracks extends Component {
           {error && <span>{error}</span>}
           <h1>Top Songs</h1>
           <section className="top-songs-container">
-            {tracks?.data.slice(0, 6)?.map((track) => (
-              <CardSong key={track.id} song={track} />
+            {tracks?.items.slice(0, 6)?.map((track, singer) => (
+              <CardSong key={track._id} song={track} artist={singer} />
             ))}
           </section>
         </div>
@@ -36,7 +36,7 @@ class ChartTracks extends Component {
 
 const mapStateToProps = (state) => ({
   error: state.chart.error,
-  tracks: state.chart.top.tracks,
+  tracks: state.chart.tracks,
   loading: state.chart.loading,
 });
 

@@ -9,7 +9,7 @@ export default function fetchSingleAlbum(id) {
     return (dispatch) => {
         dispatch(actionSingleAlbumPending());
         //fetch(`/api/album/${id}`)
-        fetch(`/Album/${id}`)
+        fetch(`/albums/detail/${id}`)
             .then((res) => res.json())
             .then((res) => {
                 if (res.error) {
