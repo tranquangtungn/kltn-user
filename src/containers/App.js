@@ -27,6 +27,7 @@ import store from "../state/store";
 import FavoriteMobilePage from "../pages/FavoritesMobilePage";
 
 import "./App.css";
+import PlayTrack from "./PlayTracks";
 
 function App() {
 
@@ -57,7 +58,9 @@ function App() {
 
             <Route component={Error} />
           </Switch>
+          <PlayTrack />
         </Provider>
+
       </div>
     </React.Fragment>
   );

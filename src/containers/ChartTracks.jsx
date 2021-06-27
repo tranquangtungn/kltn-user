@@ -16,7 +16,7 @@ class ChartTracks extends Component {
   render() {
     const { tracks, loading, error } = this.props;
     //console.log("Track: ", tracks);
-
+    console.log(tracks)
     if (loading) return <Loading />;
     else {
       return (
@@ -24,8 +24,8 @@ class ChartTracks extends Component {
           {error && <span>{error}</span>}
           <h1>Top Songs</h1>
           <section className="top-songs-container">
-            {tracks?.items.slice(0, 6)?.map((track, singer) => (
-              <CardSong key={track._id} song={track} artist={singer} />
+            {tracks?.items.slice(0, 6)?.map((track) => (
+              <CardSong key={track._id} song={track} singer={track.singer.name} />
             ))}
           </section>
         </div>
@@ -36,7 +36,7 @@ class ChartTracks extends Component {
 
 const mapStateToProps = (state) => ({
   error: state.chart.error,
-  tracks: state.chart.tracks,
+  tracks: state.chart.top,
   loading: state.chart.loading,
 });
 
