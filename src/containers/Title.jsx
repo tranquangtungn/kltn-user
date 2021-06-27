@@ -31,8 +31,8 @@ class Title extends Component {
         <img src={artist.items.avatar} alt={artist.items.name} />
         <div className="artist-info">
           <h1>{artist.items.name}</h1>
-          <p>{convertNumber(artist.nb_fan)} Fans</p>
-          <FollowButton artist={artist} />
+          <p>{convertNumber(artist.items.totalLike)} Fans</p>
+          <FollowButton artist={artist.items} />
         </div>
       </div>
     );

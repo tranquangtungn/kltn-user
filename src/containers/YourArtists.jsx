@@ -25,7 +25,7 @@ class YourArtists extends Component {
 
   render() {
     const { followingArtists } = this.props;
-
+    console.log(this.state)
     return (
       <React.Fragment>
         <h1>Your Artists</h1>

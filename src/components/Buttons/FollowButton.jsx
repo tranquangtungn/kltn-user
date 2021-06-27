@@ -18,7 +18,6 @@ class FollowButton extends Component {
 
   handleToogle = () => {
     const { artist, addFollower, removeFollower, follower } = this.props;
-
     this.setState((state) => ({ toggle: !state.toggle }));
 
     follower.find((artistSaved) => artistSaved.id === artist.id)

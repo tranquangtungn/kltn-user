@@ -45,7 +45,7 @@ const HintResults = ({ artistsFound, albumsFound, songsFound }) => {
           <h3 className="title-section">Songs</h3>
           {songsFound.items.tracks.length > 0 ? (
             songsFound.items.tracks.map((track) => (
-              <Link key={track._id} to={`/album/${track.album.id}`}>
+              <Link key={track._id} to={`/album/${track.album?.id}`}>
                 <ItemResult
                   key={track._id}
                   text={track.trackname}
