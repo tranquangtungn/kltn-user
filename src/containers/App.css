@@ -42,9 +42,7 @@
     }
 }
 
-
 /* End Global Styles */
-
 
 /* Start Search Bar */
 
@@ -97,9 +95,7 @@
     }
 }
 
-
 /* End Search Bar */
-
 
 /* Start Carousel */
 
@@ -133,9 +129,7 @@
     }
 }
 
-
 /* End Carousel */
-
 
 /* Start Divide Screen Home */
 
@@ -156,7 +150,6 @@
         flex-direction: column;
     }
 }
-
 
 /* End Divide Screen Home */
 
@@ -181,7 +174,6 @@
     transition: transform 0.2s ease-out;
 }
 
-
 /* Start Cards Tracks */
 
 .top-songs-container {
@@ -192,9 +184,7 @@
     overflow: visible;
 }
 
-
 /* End Cards Tracks */
-
 
 /* Start Chart Artists */
 
@@ -210,9 +200,7 @@
     }
 }
 
-
 /* End Chart Artists */
-
 
 /* Starts Discover Page */
 
@@ -222,9 +210,7 @@
     grid-gap: 32px;
 }
 
-
 /* End Discover Page */
-
 
 /* Start Header Section Single Album */
 
@@ -295,7 +281,6 @@ header .info p {
     }
 }
 
-
 /* End Header Section Single Album */
 
 table {
@@ -334,7 +319,6 @@ th {
     }
 }
 
-
 /* Start Single Artist Page */
 
 .header-artist {
@@ -361,9 +345,7 @@ th {
     }
 }
 
-
 /* End Single Artist Page */
-
 
 /* Start Error Page - 404 Not Found */
 
@@ -381,6 +363,5 @@ th {
     font-weight: 700;
     color: var(--yellow);
 }
-
 
 /* End Error Page - 404 Not Found */

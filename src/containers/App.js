@@ -37,7 +37,7 @@ function App() {
 
     return (
       <React.Fragment>
-        <div className="App">
+        <div>
 
           <Provider store={store}>
             <Switch>
@@ -48,7 +48,7 @@ function App() {
             </Switch>
 
           </Provider>
-          <Redirect to={`/signup`} />
+          <Redirect to={`/signin`} />
         </div>
       </React.Fragment>
     );
