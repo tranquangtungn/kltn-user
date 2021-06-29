@@ -1,6 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 // common
 import SideBar from "../components/SideBar/Sidebar";
@@ -28,31 +28,31 @@ import FavoriteMobilePage from "../pages/FavoritesMobilePage";
 
 import "./App.css";
 import PlayTrack from "./PlayTracks";
-import SignUpPage from "pages/SignUpPage";
-import SignInPage from "pages/SignInPage";
-import ForgotPasswordPage from "pages/ForgotPasswordPage";
+// import SignUpPage from "pages/SignUpPage";
+// import SignInPage from "pages/SignInPage";
+// import ForgotPasswordPage from "pages/ForgotPasswordPage";
 
 function App() {
-  if (true) {
+  // if (true) {
 
-    return (
-      <React.Fragment>
-        <div>
+  //   return (
+  //     <React.Fragment>
+  //       <div>
 
-          <Provider store={store}>
-            <Switch>
-              <Route exact path="/signup" component={SignUpPage}></Route>
-              <Route exact path="/signin" component={SignInPage}></Route>
-              <Route exact path="/fogotpass" component={ForgotPasswordPage}></Route>
-              <Route component={Error} />
-            </Switch>
+  //         <Provider store={store}>
+  //           <Switch>
+  //             <Route exact path="/signup" component={SignUpPage}></Route>
+  //             <Route exact path="/signin" component={SignInPage}></Route>
+  //             <Route exact path="/fogotpass" component={ForgotPasswordPage}></Route>
+  //             <Route component={Error} />
+  //           </Switch>
 
-          </Provider>
-          <Redirect to={`/signin`} />
-        </div>
-      </React.Fragment>
-    );
-  }
+  //         </Provider>
+  //         <Redirect to={`/signin`} />
+  //       </div>
+  //     </React.Fragment>
+  //   );
+  // }
   return (
     <React.Fragment>
       <div className="App">

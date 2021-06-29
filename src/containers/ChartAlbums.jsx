@@ -7,7 +7,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-import fetchTopAlbumsAction from "../api/fetchChart";
+import fetchTopAlbumsAction from "../api/fetchTopAlbums";
 
 import Loading from "../components/Loading/Loading";
 import CardAlbum from "../components/CardAlbum/CardAlbum";
@@ -71,7 +71,7 @@ class ChartAlbums extends Component {
           <section>
             <div className="slider">
               <div className="items-slider" id="carousel-top-albums">
-                {albums?.data.map((album) => (
+                {albums?.items.map((album) => (
                   <CardAlbum key={album._id} album={album} />
                 ))}
               </div>
@@ -85,7 +85,7 @@ class ChartAlbums extends Component {
 
 const mapStateToProps = (state) => ({
   error: state.chart.error,
-  albums: state.chart.top.albums,
+  albums: state.chart.top,
   loading: state.chart.loading,
 });
 

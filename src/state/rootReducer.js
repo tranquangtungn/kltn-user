@@ -4,6 +4,7 @@ import chart from "./chart/topArtistsReducer";
 import singleArtist from "./singleArtist/singleArtistReducer";
 import albumsArtist from "./albumsArtist/albumsArtistReducer";
 import topArtistTracks from "./topArtistTracks/topArtistTracksReducer";
+import topAlbums from "./topAlbums/topAlbumsReducer";
 import relatedArtists from "./relatedArtists/relatedArtistsReducer";
 import singleAlbums from "./singleAlbum/singleAlbumReducer";
 import searchArtists from "./search/searchArtistsReducer";
@@ -20,6 +21,7 @@ export default combineReducers({
     singleArtist,
     albumsArtist,
     topArtistTracks,
+    topAlbums,
     relatedArtists,
     singleAlbums,
     searchArtists,
