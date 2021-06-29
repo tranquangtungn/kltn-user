@@ -47,7 +47,6 @@ class ChartAlbums extends Component {
 
   render() {
     const { albums, loading, error } = this.props;
-    console.log(albums)
     if (loading) return <Loading />;
     else {
       return (
@@ -86,7 +85,7 @@ class ChartAlbums extends Component {
 const mapStateToProps = (state) => ({
   error: state.topAlbums.error,
   albums: state.topAlbums.albums,
-  loading: state.chart.loading,
+  loading: state.topAlbums.loading,
 
 }
 );

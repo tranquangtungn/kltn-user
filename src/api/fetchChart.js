@@ -1,13 +1,13 @@
 import fetch from "cross-fetch";
 import {
-    actionTopArtistsPending,
-    actionTopArtistsSuccess,
-    actionTopArtistsError,
-} from "../state/chart/topArtistsAction";
+    actionTopTracksPending,
+    actionTopTracksSuccess,
+    actionTopTracksError,
+} from "../state/chart/topTracksAction";
 
-export default function fetchChart() {
+export default function fetchTopTracks() {
     return (dispatch) => {
-        dispatch(actionTopArtistsPending());
+        dispatch(actionTopTracksPending());
         fetch("/tracks/top-music")
             // fetch("/chart")
             .then((res) => res.json())
@@ -16,11 +16,11 @@ export default function fetchChart() {
                     throw res.error;
                 }
 
-                dispatch(actionTopArtistsSuccess(res));
+                dispatch(actionTopTracksSuccess(res));
                 return res;
             })
             .catch((error) => {
-                dispatch(actionTopArtistsError(error));
+                dispatch(actionTopTracksError(error));
             });
     };
 }

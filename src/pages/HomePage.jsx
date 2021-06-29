@@ -17,7 +17,13 @@ class HomePage extends Component {
             <ChartTracks />
           </div>
         </div>
-        <ChartArtists />
+        {/* <ChartArtists /> */}
+        <p>
+          <br />
+          <br />
+          <br />
+          <br />
+        </p>
       </div>
     );
   }

@@ -35,9 +35,9 @@ class ChartTracks extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  error: state.chart.error,
-  tracks: state.chart.top,
-  loading: state.chart.loading,
+  error: state.topTracks.error,
+  tracks: state.topTracks.tracks,
+  loading: state.topTracks.loading,
 });
 
 const mapDispatchToProps = (dispatch) =>
