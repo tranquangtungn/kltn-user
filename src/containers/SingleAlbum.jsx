@@ -28,9 +28,9 @@ class SingleAlbum extends Component {
     return (
       <div className="container-right">
         <header>
-          <img src={album.items.background} alt={album.items.albumname} />
+          <img src={album.items?.background} alt={`${album.items?.albumname}`} />
           <section className="info">
-            <h1>{album.items.albumname}</h1>
+            <h1>{album.items?.albumname}</h1>
             <div className="tags-genres">
               {album.genres?.data?.map((genre) => (
                 <Link to={`/genre/${genre.id}`}>
@@ -39,7 +39,7 @@ class SingleAlbum extends Component {
               ))}
             </div>
             <div className="details">
-              <p>{album.items.tracks.count} Songs</p>
+              <p>{album.items?.tracks.count} Songs</p>
               <p id="dot">&bull;</p>
               <p>{convertDurationAlbum(album.duration)}</p>
             </div>
@@ -57,7 +57,7 @@ class SingleAlbum extends Component {
             </tr>
           </thead>
           <tbody>
-            {album.items.tracks.map((track, index) => (
+            {album.items?.tracks.map((track, index) => (
               <tr key={track._id}>
                 <td>{index + 1}</td>
                 <td>

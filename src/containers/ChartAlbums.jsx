@@ -47,7 +47,7 @@ class ChartAlbums extends Component {
 
   render() {
     const { albums, loading, error } = this.props;
-
+    console.log(albums)
     if (loading) return <Loading />;
     else {
       return (
@@ -71,7 +71,7 @@ class ChartAlbums extends Component {
           <section>
             <div className="slider">
               <div className="items-slider" id="carousel-top-albums">
-                {albums?.items.map((album) => (
+                {albums?.items?.map((album) => (
                   <CardAlbum key={album._id} album={album} />
                 ))}
               </div>
@@ -84,10 +84,12 @@ class ChartAlbums extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  error: state.chart.error,
-  albums: state.chart.top,
+  error: state.topAlbums.error,
+  albums: state.topAlbums.albums,
   loading: state.chart.loading,
-});
+
+}
+);
 
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators(
