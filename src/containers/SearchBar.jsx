@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import fetchSearchArtistAction from "../api/fetchSearchArtists";
 import fetchSearchAlbumsAction from "../api/fetchSearchAlbums";
@@ -66,7 +66,7 @@ class SearchBar extends Component {
       return (
         <div className="search-container">
           <form onSubmit={this.handleSearch}>
-            <FontAwesomeIcon className="icon-search" icon={faSearch} />
+            {/* <FontAwesomeIcon className="icon-search" size="40px" icon={faSearch} /> */}
             <input
               type="text"
               placeholder="Search Artist, Albums, Songs"
@@ -79,7 +79,7 @@ class SearchBar extends Component {
     return (
       <div className="search-container">
         <form onSubmit={this.handleSearch}>
-          <FontAwesomeIcon className="icon-search" icon={faSearch} />
+          {/* <FontAwesomeIcon className="icon-search" size="40px" icon={faSearch} /> */}
           <input
             type="text"
             placeholder="Search Artist, Albums, Songs"

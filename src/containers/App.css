@@ -60,12 +60,14 @@
 }
 
 .search-container form input {
-    padding: 0;
+    padding: 0 10px;
     height: 40px;
     width: 325px;
     max-width: 325px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
     background: var(--background-secondary-color);
     color: var(--text-color);
     font-family: "Poppins", sans-serif;

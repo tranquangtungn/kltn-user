@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ChartAlbums from "../containers/ChartAlbums";
 import PopularGenres from "../components/PopularGenres/PopularGenres";
 import ChartTracks from "../containers/ChartTracks";
-import ChartArtists from "../containers/ChartArtists";
+// import ChartArtists from "../containers/ChartArtists";
 
 class HomePage extends Component {
   render() {

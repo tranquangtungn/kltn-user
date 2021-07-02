@@ -28,9 +28,9 @@ import FavoriteMobilePage from "../pages/FavoritesMobilePage";
 
 import "./App.css";
 import PlayTrack from "./PlayTracks";
-// import SignUpPage from "pages/SignUpPage";
-// import SignInPage from "pages/SignInPage";
-// import ForgotPasswordPage from "pages/ForgotPasswordPage";
+import SignUpPage from "pages/SignUpPage";
+import SignInPage from "pages/SignInPage";
+import ForgotPasswordPage from "pages/ForgotPasswordPage";
 
 function App() {
   // if (true) {
@@ -61,7 +61,9 @@ function App() {
           <SearchBar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
-
+            <Route exact path="/signin" component={SignInPage}></Route>
+            <Route exact path="/signup" component={SignUpPage}></Route>
+            <Route exact path="/fogotpass" component={ForgotPasswordPage}></Route>
             <Route exact path="/discover" component={Discover}></Route>
             <Route exact path="/radio" component={Radio}></Route>
             <Route exact path="/foryou" component={ForYou}></Route>
