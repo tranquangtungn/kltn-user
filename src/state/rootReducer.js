@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
 
 import topTracks from "./chart/topTracksReducer";
+import topSingers from "./topSingers/topSingersReducer";
 import singleArtist from "./singleArtist/singleArtistReducer";
 import albumsArtist from "./albumsArtist/albumsArtistReducer";
 import topArtistTracks from "./topArtistTracks/topArtistTracksReducer";
@@ -18,6 +19,7 @@ import favorites from "./favorites/favoriteReducer";
 
 export default combineReducers({
     topTracks,
+    topSingers,
     singleArtist,
     albumsArtist,
     topArtistTracks,

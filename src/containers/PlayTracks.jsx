@@ -37,9 +37,7 @@ class PlayTrack extends Component {
     render() {
         return (
             <div className={'PlayTrack'}>
-                <button className={'Demo__load-btn'} onClick={this.loadPlayList}>
-                    load playlist
-                </button>
+
                 <AudioPlayer currentPlayList={this.state.currentPlayList} onToggle={({ audioPlaying }) => console.log({ audioPlaying })} />
             </div>
         )

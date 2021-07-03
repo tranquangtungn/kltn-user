@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import fetchTopArtistsAction from "../api/fetchChart";
+import fetchTopArtistsAction from "../api/fetchTopSingers";
 
 import Loading from "../components/Loading/Loading";
 import Card from "../components/CardArtists/Card";
@@ -23,8 +23,8 @@ class ChartArtists extends Component {
           {error && <span>{error}</span>}
           <h1>Featured Artists</h1>
           <div className="featured-artists">
-            {artists?.data.map((artist) => (
-              <Card key={artist.id} artist={artist} />
+            {artists?.items.map((artist) => (
+              <Card key={artist._id} artist={artist} />
             ))}
           </div>
         </React.Fragment>
@@ -34,9 +34,9 @@ class ChartArtists extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  error: state.chart.error,
-  artists: state.chart.top.artists,
-  loading: state.chart.loading,
+  error: state.topSingers.error,
+  artists: state.topSingers.artists,
+  loading: state.topSingers.loading,
 });
 
 const mapDispatchToProps = (dispatch) =>
