@@ -7,7 +7,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-import fetchArtistsRelatedAction from "../api/fetchArtistsRelated";
+import fetchArtistsRelatedAction from "../api/fetchTopSingers";
 
 import Loading from "../components/Loading/Loading";
 import Card from "../components/CardArtists/Card";
@@ -76,8 +76,8 @@ class RelatedArtists extends Component {
         <section>
           <div className="slider">
             <div className="items-slider" id="carousel-related">
-              {related.data?.map((artist) => (
-                <Card key={artist.id} artist={artist} />
+              {related.items?.map((artist) => (
+                <Card key={artist._id} artist={artist} />
               ))}
             </div>
           </div>
@@ -88,9 +88,9 @@ class RelatedArtists extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  loading: state.relatedArtists.loading,
-  error: state.relatedArtists.error,
-  related: state.relatedArtists.related,
+  loading: state.topSingers.loading,
+  error: state.topSingers.error,
+  related: state.topSingers.singers,
 });
 
 const mapDispatchToProps = (dispatch) =>
