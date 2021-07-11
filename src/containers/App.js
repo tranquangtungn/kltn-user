@@ -31,7 +31,7 @@ import PlayTrack from "./PlayTracks";
 import SignUpPage from "pages/SignUpPage";
 import SignInPage from "pages/SignInPage";
 import ForgotPasswordPage from "pages/ForgotPasswordPage";
-
+import { PrivateRoute } from '../_components';
 function App() {
   // if (true) {
 
@@ -60,7 +60,7 @@ function App() {
         <Provider store={store}>
           <SearchBar />
           <Switch>
-            <Route exact path="/" component={Home}></Route>
+            <PrivateRoute exact path="/" component={Home}></PrivateRoute>
             <Route exact path="/signin" component={SignInPage}></Route>
             <Route exact path="/signup" component={SignUpPage}></Route>
             <Route exact path="/fogotpass" component={ForgotPasswordPage}></Route>
