@@ -16,6 +16,7 @@
         "mobx": "^6.3.2",
         "mobx-react": "^7.2.0",
         "react": "^16.13.1",
+        "react-datepicker": "^4.1.1",
         "react-dom": "^16.13.1",
         "react-player": "^2.5.0",
         "react-playlist-player": "^1.0.11",

@@ -60,7 +60,7 @@ function App() {
         <Provider store={store}>
           <SearchBar />
           <Switch>
-            <PrivateRoute exact path="/" component={Home}></PrivateRoute>
+            <Route exact path="/" component={Home}></Route>
             <Route exact path="/signin" component={SignInPage}></Route>
             <Route exact path="/signup" component={SignUpPage}></Route>
             <Route exact path="/fogotpass" component={ForgotPasswordPage}></Route>

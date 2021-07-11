@@ -58,7 +58,7 @@ function register(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`/users/register`, requestOptions).then(handleResponse);
+    return fetch(`/accounts/register-account`, requestOptions).then(handleResponse);
 }
 
 function update(user) {

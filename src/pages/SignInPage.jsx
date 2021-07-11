@@ -48,11 +48,17 @@ class SignInPage extends Component {
               <div className="form-group">
                 <label>Email</label>
                 <input type="text" className="form-control" name="username" placeholder="Enter email" value={username} onChange={this.handleChange} />
+                {submitted && !username &&
+                  <div className="help-block">Username is required</div>
+                }
               </div>
 
               <div className="form-group">
                 <label>Password</label>
                 <input type="password" className="form-control" name="password" placeholder="Enter password" value={password} onChange={this.handleChange} />
+                {submitted && !password &&
+                  <div className="help-block">Password is required</div>
+                }
               </div>
 
               <div className="form-group">
