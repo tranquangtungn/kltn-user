@@ -16,6 +16,9 @@ import artistsByGenre from "./byGenre/byGenreReducer";
 import topTopRadios from "./radio/topRadiosReducer";
 import singleRadio from "./radio/singleRadioReducer";
 import favorites from "./favorites/favoriteReducer";
+import { authentication } from '../_reducers/authentication.reducer';
+import { registration } from '../_reducers/registration.reducer';
+import { users } from '../_reducers/users.reducer';
 
 export default combineReducers({
     topTracks,
@@ -34,4 +37,7 @@ export default combineReducers({
     topTopRadios,
     singleRadio,
     favorites,
+    authentication,
+    registration,
+    users,
 });

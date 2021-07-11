@@ -1,7 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
 import { NavLink } from "react-router-dom";
-
+import ToogleTheme from "../../components/Buttons/Toggle";
 import {
   faHome,
   faSearch,
@@ -14,6 +14,7 @@ const Sidebar = () => {
   return (
     <div className="container">
       <section className="sidebar-topics">
+        <ToogleTheme />
         <NavLink exact to="/" className="item" activeClassName="active">
           <span>Home</span>
         </NavLink>

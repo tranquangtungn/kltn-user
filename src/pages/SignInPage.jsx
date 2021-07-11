@@ -2,22 +2,57 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "./SignInPage.css";
+import { userActions } from '../_actions';
+import { connect } from 'react-redux';
 class SignInPage extends Component {
+  constructor(props) {
+    super(props);
+    console.log(this.props)
+    // reset login status
+    this.props.logout();
+
+    this.state = {
+      username: '',
+      password: '',
+      submitted: false
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(e) {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+
+    this.setState({ submitted: true });
+    const { username, password } = this.state;
+    if (username && password) {
+      this.props.login(username, password);
+    }
+  }
+
   render() {
+    const { loggingIn } = this.props;
+    const { username, password, submitted } = this.state;
     return (
       <div className="sign-in-page">
         <div className="outer">
           <div className="inner">
-            <form>
+            <form onSubmit={this.handleSubmit}>
               <h3>Log in</h3>
               <div className="form-group">
                 <label>Email</label>
-                <input type="email" className="form-control" placeholder="Enter email" />
+                <input type="text" className="form-control" name="username" placeholder="Enter email" value={username} onChange={this.handleChange} />
               </div>
 
               <div className="form-group">
                 <label>Password</label>
-                <input type="password" className="form-control" placeholder="Enter password" />
+                <input type="password" className="form-control" name="password" placeholder="Enter password" value={password} onChange={this.handleChange} />
               </div>
 
               <div className="form-group">
@@ -39,5 +74,15 @@ class SignInPage extends Component {
     );
   }
 }
+function mapState(state) {
+  console.log(state)
+  const { loggingIn } = state.authentication;
+  return { loggingIn };
+}
 
-export default SignInPage;
+const actionCreators = {
+  login: userActions.login,
+  logout: userActions.logout
+};
+
+export default connect(mapState, actionCreators)(SignInPage);

@@ -5,6 +5,7 @@
     border-radius: 50px;
     padding: 3px;
     background: var(--background-secondary-color);
+    margin-left: 10px;
 }
 
 .toggle:hover {

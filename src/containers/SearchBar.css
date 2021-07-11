@@ -1,0 +1,10 @@
+.btn-signin {
+    width: 100px;
+    height: 40px;
+    background: black;
+    text-align: center;
+    padding-top: 7px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+}

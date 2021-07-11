@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,8 +10,8 @@ import fetchSearchAlbumsAction from "../api/fetchSearchAlbums";
 import fetchSearchTracksAction from "../api/fetchSearchTracks";
 
 import HintResults from "../components/SearchResults/HintResults";
-import ToogleTheme from "../components/Buttons/Toggle";
 
+import "./SearchBar.css"
 class SearchBar extends Component {
   constructor(props) {
     super(props);
@@ -73,7 +74,8 @@ class SearchBar extends Component {
               onChange={this.handleChange}
             />
           </form>
-          <ToogleTheme />
+          <Link to="/signin" className="btn-signin"> Sign in</Link>
+
         </div>
       );
     return (
@@ -91,7 +93,7 @@ class SearchBar extends Component {
             songsFound={foundTracks}
           />
         </form>
-        <ToogleTheme />
+        <Link to="/signin" className="btn-signin"> Sign in</Link>
       </div>
     );
   }

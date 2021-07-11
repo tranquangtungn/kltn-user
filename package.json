@@ -12,6 +12,7 @@
         "@testing-library/user-event": "^7.2.1",
         "bootstrap": "^5.0.2",
         "cross-fetch": "^3.0.5",
+        "history": "^4.10.1",
         "mobx": "^6.3.2",
         "mobx-react": "^7.2.0",
         "react": "^16.13.1",
@@ -19,9 +20,11 @@
         "react-player": "^2.5.0",
         "react-playlist-player": "^1.0.11",
         "react-redux": "^7.2.0",
+        "react-router": "^5.2.0",
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.1",
         "redux": "^4.0.5",
+        "redux-logger": "^3.0.6",
         "redux-thunk": "^2.3.0"
     },
     "scripts": {
