@@ -51,7 +51,7 @@ class SingleAlbum extends Component {
             <tr>
               <th>#</th>
               <th>Title</th>
-              <th id="duration-header">Duration</th>
+              <th id="duration-header"></th>
               <th></th>
               <th></th>
             </tr>
@@ -64,7 +64,7 @@ class SingleAlbum extends Component {
                   <p>{track.trackname}</p>
                 </td>
                 <td className="duration-field">
-                  {convertDurationTrack(track.duration)}
+
                 </td>
                 <td>
                   <PlayButton url={track.tracklink} />

@@ -19,7 +19,7 @@ const CardSong = ({ song, singer }) => {
           </p>
         </div>
       </div>
-      <p className="duration">{convertDurationTrack(song.duration)}</p>
+      {/* <p className="duration">{convertDurationTrack(song.duration)}</p> */}
       <PlayButton url={song.tracklink} />
       <HeartButton track={song} />
     </div>
