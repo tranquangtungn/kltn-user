@@ -5,6 +5,7 @@ import "./SignInPage.css";
 import { userActions } from '../_actions';
 import { connect } from 'react-redux';
 import FacebookLogin from 'react-facebook-login';
+import GoogleLogin from 'react-google-login';
 class SignInPage extends Component {
   constructor(props) {
     super(props);
@@ -70,6 +71,9 @@ class SignInPage extends Component {
 
 
   }
+  responseGoogle(response) {
+    console.log(response);
+  }
 
   render() {
     const { loggingIn } = this.props;
@@ -112,7 +116,16 @@ class SignInPage extends Component {
                 fields="id,name,first_name,last_name,middle_name,picture,gender,birthday,email"
                 // onClick={this.componentClicked}
                 callback={this.responseFacebook} />
-
+              <GoogleLogin
+                clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+                render={renderProps => (
+                  <button className="btn btn-danger btn-lg btn-block" onClick={renderProps.onClick} disabled={renderProps.disabled}>Login with Google</button>
+                )}
+                buttonText="Login"
+                onSuccess={this.responseGoogle}
+                onFailure={this.responseGoogle}
+                cookiePolicy={'single_host_origin'}
+              />
               <p className="forgot-password text-right">
                 Forgot <a href="/#">password?</a>
               </p>
