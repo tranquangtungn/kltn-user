@@ -15,11 +15,21 @@ class SignInPage extends Component {
     this.state = {
       username: '',
       password: '',
+      user: {
+        id: "",
+        firstname: "",
+        lastname: "",
+        gender: "",
+        birthday: "",
+        picture: "",
+        email: ""
+      },
       submitted: false
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.responseFacebook = this.responseFacebook.bind(this);
   }
 
   handleChange(e) {
@@ -38,6 +48,27 @@ class SignInPage extends Component {
   }
   responseFacebook(response) {
     console.log(response);
+    // const userFb = {
+    //   id: "",
+    //   firstname: "",
+    //   lastname: "",
+    //   gender: "",
+    //   picture: "",
+    //   email: "",
+    // };
+    const userFb = {
+      id: response.id,
+      firstname: response.first_name,
+      lastname: response.last_name,
+
+      picture: response.picture.data.url,
+      email: response.email,
+    }
+    this.props.loginFb(userFb);
+    console.log(this.props)
+    // const { user } = this.state.user;
+
+
   }
 
   render() {
@@ -78,7 +109,7 @@ class SignInPage extends Component {
               <FacebookLogin
                 cssClass="btn btn-primary btn-lg btn-block"
                 appId="428202575028941"
-                fields="name,email,picture"
+                fields="id,name,first_name,last_name,middle_name,picture,gender,birthday,email"
                 // onClick={this.componentClicked}
                 callback={this.responseFacebook} />
 
@@ -100,7 +131,8 @@ function mapState(state) {
 
 const actionCreators = {
   login: userActions.login,
-  logout: userActions.logout
+  logout: userActions.logout,
+  loginFb: userActions.loginFb,
 };
 
 export default connect(mapState, actionCreators)(SignInPage);

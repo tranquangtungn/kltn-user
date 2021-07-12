@@ -3,6 +3,7 @@ import { authHeader } from '../_helpers';
 
 export const userService = {
     login,
+    loginFb,
     logout,
     register,
     getAll,
@@ -27,6 +28,16 @@ function login(username, password) {
             return user;
         });
 }
+function loginFb(user) {
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(user)
+    };
+
+    return fetch(`/accounts/login-facebook`, requestOptions).then(handleResponse);
+}
+
 
 function logout() {
     // remove user from local storage to log user out

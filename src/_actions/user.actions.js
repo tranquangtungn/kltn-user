@@ -8,8 +8,32 @@ export const userActions = {
     logout,
     register,
     getAll,
-    delete: _delete
+    delete: _delete,
+    loginFb,
 };
+function loginFb(user) {
+    return dispatch => {
+        dispatch(request(user));
+
+        userService.loginFb(user)
+            .then(
+                user => {
+                    dispatch(success());
+                    // history.push('/signin');
+                    // window.location.reload();
+                    dispatch(alertActions.success('Registration successful'));
+                },
+                error => {
+                    dispatch(failure(error.toString()));
+                    dispatch(alertActions.error(error.toString()));
+                }
+            );
+    };
+
+    function request(user) { return { type: userConstants.LOGIN_FACEBOOK_REQUEST, user } }
+    function success(user) { return { type: userConstants.LOGIN_FACEBOOK_SUCCESS, user } }
+    function failure(error) { return { type: userConstants.LOGIN_FACEBOOK_FAILURE, error } }
+}
 
 function login(username, password) {
     return dispatch => {
