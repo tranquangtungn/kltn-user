@@ -16,8 +16,8 @@ class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = { query: "", user: "" };
-    let user = localStorage.getItem('user');
-    this.setState({ user: user });
+    // let user = localStorage.getItem('user');
+    // this.setState({ user: user });
     this.handleChange = this.handleChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
   }

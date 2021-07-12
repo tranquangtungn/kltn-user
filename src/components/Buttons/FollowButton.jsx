@@ -20,7 +20,7 @@ class FollowButton extends Component {
     const { artist, addFollower, removeFollower, follower } = this.props;
     this.setState((state) => ({ toggle: !state.toggle }));
 
-    follower.find((artistSaved) => artistSaved.id === artist.id)
+    follower.find((artistSaved) => artistSaved._id === artist._id)
       ? removeFollower(artist.id)
       : addFollower(artist);
   };
@@ -33,7 +33,7 @@ class FollowButton extends Component {
         icon={faHeart}
         className={
           "Follow-Button" +
-          (follower.find((artistSaved) => artistSaved.id === artist.id)
+          (follower.find((artistSaved) => artistSaved._id === artist._id)
             ? " Press"
             : "")
         }
@@ -41,7 +41,7 @@ class FollowButton extends Component {
       >
         <FontAwesomeIcon icon={faHeart} />
         <span>
-          {follower.find((artistSaved) => artistSaved.id === artist.id)
+          {follower.find((artistSaved) => artistSaved._id === artist._id)
             ? "Unfollow"
             : "Follow"}
         </span>
