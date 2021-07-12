@@ -19,7 +19,7 @@ class HeartButton extends Component {
   handleToogle = () => {
     const { track, addFavorites, removeFavorite, favorites } = this.props;
     this.setState((state) => ({ toggle: !state.toggle }));
-    favorites.find((trackSaved) => trackSaved.id === track.id)
+    favorites.find((trackSaved) => trackSaved._id === track._id)
       ? removeFavorite(track.id)
       : addFavorites(track);
   };
@@ -33,7 +33,7 @@ class HeartButton extends Component {
           icon={faHeart}
           className={
             "Heart" +
-            (favorites.find((trackSaved) => trackSaved.id === track.id)
+            (favorites.find((trackSaved) => trackSaved._id === track._id)
               ? " isFollow"
               : "")
           }
