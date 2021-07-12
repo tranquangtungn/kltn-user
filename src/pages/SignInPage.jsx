@@ -4,6 +4,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "./SignInPage.css";
 import { userActions } from '../_actions';
 import { connect } from 'react-redux';
+import FacebookLogin from 'react-facebook-login';
 class SignInPage extends Component {
   constructor(props) {
     super(props);
@@ -34,6 +35,9 @@ class SignInPage extends Component {
     if (username && password) {
       this.props.login(username, password);
     }
+  }
+  responseFacebook(response) {
+    console.log(response);
   }
 
   render() {
@@ -71,9 +75,17 @@ class SignInPage extends Component {
               <button type="submit" className="btn btn-dark btn-lg btn-block">Sign in</button>
               <Link to="/signup" className="btn btn-dark btn-lg btn-block">Sign up</Link>
 
+              <FacebookLogin
+                cssClass="btn btn-primary btn-lg btn-block"
+                appId="428202575028941"
+                fields="name,email,picture"
+                // onClick={this.componentClicked}
+                callback={this.responseFacebook} />
+
               <p className="forgot-password text-right">
                 Forgot <a href="/#">password?</a>
               </p>
+
             </form>
           </div>
         </div></div >
