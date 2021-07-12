@@ -36,7 +36,13 @@ function loginFb(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`/accounts/login-facebook`, requestOptions).then(handleResponse);
+    return fetch(`/accounts/login-facebook`, requestOptions).then(handleResponse)
+        .then(user => {
+            // store user details and jwt token in local storage to keep user logged in between page refreshes
+            localStorage.setItem('user', JSON.stringify(user));
+
+            return user;
+        });;
 }
 
 function loginGg(user) {
@@ -46,7 +52,13 @@ function loginGg(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`/accounts/login-google`, requestOptions).then(handleResponse);
+    return fetch(`/accounts/login-google`, requestOptions).then(handleResponse)
+        .then(user => {
+            // store user details and jwt token in local storage to keep user logged in between page refreshes
+            localStorage.setItem('user', JSON.stringify(user));
+
+            return user;
+        });;
 }
 
 

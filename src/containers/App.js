@@ -31,7 +31,7 @@ import PlayTrack from "./PlayTracks";
 import SignUpPage from "pages/SignUpPage";
 import SignInPage from "pages/SignInPage";
 import ForgotPasswordPage from "pages/ForgotPasswordPage";
-import { PrivateRoute } from '../_components';
+// import { PrivateRoute } from '../_components';
 function App() {
   // if (true) {
 

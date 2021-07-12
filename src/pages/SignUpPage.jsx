@@ -57,7 +57,7 @@ class SignUpPage extends Component {
   }
 
   render() {
-    const { registering } = this.props;
+    // const { registering } = this.props;
     const { user, submitted } = this.state;
     return (
       <div className="sign-in-page">

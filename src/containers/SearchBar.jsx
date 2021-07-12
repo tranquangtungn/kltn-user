@@ -15,8 +15,9 @@ import "./SearchBar.css"
 class SearchBar extends Component {
   constructor(props) {
     super(props);
-    this.state = { query: "" };
-
+    this.state = { query: "", user: "" };
+    let user = localStorage.getItem('user');
+    this.setState({ user: user });
     this.handleChange = this.handleChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
   }
@@ -33,7 +34,7 @@ class SearchBar extends Component {
 
   handleChange(e) {
     let query = e.target.value;
-    this.setState({ query });
+    this.setState({ query: query });
 
     const { searchArtists, searchAlbums, searchTracks } = this.props;
 
@@ -49,6 +50,9 @@ class SearchBar extends Component {
   }
 
   render() {
+    // let user = localStorage.getItem('user');
+    // this.setState({ user: user });
+    // console.log(this.state); 
     window.addEventListener("click", function (e) {
       // if element exists, then...
       if (document.getElementById("hint-container")) {

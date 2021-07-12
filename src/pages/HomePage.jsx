@@ -5,7 +5,7 @@ import ChartTracks from "../containers/ChartTracks";
 import ChartArtists from "../containers/ChartArtists";
 
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { userActions } from '../_actions';
@@ -14,7 +14,7 @@ class HomePage extends Component {
     this.props.getUsers();
   }
   render() {
-    const { user } = this.props;
+    // const { user } = this.props;
     return (
       <div className="container-right">
         <ChartAlbums />

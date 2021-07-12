@@ -49,7 +49,7 @@ class SignInPage extends Component {
     }
   }
   responseFacebook(response) {
-    console.log(response);
+
     // const userFb = {
     //   id: "",
     //   firstname: "",
@@ -67,13 +67,13 @@ class SignInPage extends Component {
       email: response.email,
     }
     this.props.loginFb(userFb);
-    console.log(this.props)
+
     // const { user } = this.state.user;
 
 
   }
   responseGoogle(response) {
-    console.log(response);
+
     const userGg = {
       id: response.profileObj.googleId,
       firstname: response.profileObj.familyName,
@@ -86,7 +86,7 @@ class SignInPage extends Component {
   }
 
   render() {
-    const { loggingIn } = this.props;
+    // const { loggingIn } = this.props;
     const { username, password, submitted } = this.state;
     return (
       <div className="sign-in-page">
