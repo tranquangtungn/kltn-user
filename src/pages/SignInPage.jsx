@@ -31,6 +31,7 @@ class SignInPage extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.responseFacebook = this.responseFacebook.bind(this);
+    this.responseGoogle = this.responseGoogle.bind(this);
   }
 
   handleChange(e) {
@@ -73,6 +74,15 @@ class SignInPage extends Component {
   }
   responseGoogle(response) {
     console.log(response);
+    const userGg = {
+      id: response.profileObj.googleId,
+      firstname: response.profileObj.familyName,
+      lastname: response.profileObj.givenName,
+
+      picture: response.profileObj.imageUrl,
+      email: response.profileObj.email,
+    }
+    this.props.loginFb(userGg);
   }
 
   render() {
@@ -117,7 +127,7 @@ class SignInPage extends Component {
                 // onClick={this.componentClicked}
                 callback={this.responseFacebook} />
               <GoogleLogin
-                clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+                clientId="988060389475-ekg1vusjst9a3k94dvv1s4kvioetltr7.apps.googleusercontent.com"
                 render={renderProps => (
                   <button className="btn btn-danger btn-lg btn-block" onClick={renderProps.onClick} disabled={renderProps.disabled}>Login with Google</button>
                 )}

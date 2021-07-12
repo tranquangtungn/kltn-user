@@ -10,7 +10,31 @@ export const userActions = {
     getAll,
     delete: _delete,
     loginFb,
+    loginGg,
 };
+function loginGg(user) {
+    return dispatch => {
+        dispatch(request(user));
+
+        userService.loginGg(user)
+            .then(
+                user => {
+                    dispatch(success());
+                    history.push('/');
+                    window.location.reload();
+                    dispatch(alertActions.success('Registration successful'));
+                },
+                error => {
+                    dispatch(failure(error.toString()));
+                    dispatch(alertActions.error(error.toString()));
+                }
+            );
+    };
+
+    function request(user) { return { type: userConstants.LOGIN_GOOGLE_REQUEST, user } }
+    function success(user) { return { type: userConstants.LOGIN_GOOGLE_SUCCESS, user } }
+    function failure(error) { return { type: userConstants.LOGIN_GOOGLE_FAILURE, error } }
+}
 function loginFb(user) {
     return dispatch => {
         dispatch(request(user));

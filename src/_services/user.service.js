@@ -4,6 +4,7 @@ import { authHeader } from '../_helpers';
 export const userService = {
     login,
     loginFb,
+    loginGg,
     logout,
     register,
     getAll,
@@ -37,6 +38,17 @@ function loginFb(user) {
 
     return fetch(`/accounts/login-facebook`, requestOptions).then(handleResponse);
 }
+
+function loginGg(user) {
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(user)
+    };
+
+    return fetch(`/accounts/login-google`, requestOptions).then(handleResponse);
+}
+
 
 
 function logout() {
