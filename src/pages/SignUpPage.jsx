@@ -51,7 +51,7 @@ class SignUpPage extends Component {
 
     this.setState({ submitted: true });
     const { user } = this.state;
-    if (user.firstname && user.lastname && user.username && user.password) {
+    if (user.firstname && user.lastname && user.username && user.password && user.gender && user.phonenumber && user.birthday && user.email) {
       this.props.register(user);
     }
   }
@@ -83,7 +83,11 @@ class SignUpPage extends Component {
               </div>
               <div className="form-group">
                 <label>gender</label>
-                <input type="text" className="form-control" placeholder="Gender" name="gender" value={user.gender} onChange={this.handleChange} />
+                <div className="gender-control" onChange={this.handleChange}>
+                  <input type="radio" value="Nam" name="gender" /> {`Male `}
+                  <input type="radio" value="Nữ" name="gender" /> {`Female `}
+                  <input type="radio" value="Khác" name="gender" /> {`Other `}
+                </div>
                 {submitted && !user.gender &&
                   <div className="help-block">Gender is required</div>
                 }
@@ -91,13 +95,15 @@ class SignUpPage extends Component {
               <div className="form-group">
                 <label>Birthday</label>
                 {/* <input type="text" className="form-control" placeholder="Last name" name="lastname" value={user.lastname} onChange={this.handleChange} /> */}
-                <DatePicker selected={user.birthday} className="date-control" name="birthday" value={user.birthday} onChange={(date) => {
+                {/* <div className="form-control"> */}
+                <DatePicker selected={user.birthday} className="form-control" name="birthday" value={user.birthday} onChange={(date) => {
                   this.setState({
                     user: {
                       birthday: date
                     }
                   });
                 }} />
+                {/* </div> */}
                 {submitted && !user.birthday &&
                   <div className="help-block">Last Name is required</div>
                 }
@@ -134,7 +140,7 @@ class SignUpPage extends Component {
 
               <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
               <p className="forgot-password text-right">
-                Already registered <a href="/#">log in?</a>
+                Already registered <a href="/signin">log in?</a>
               </p>
             </form>
           </div>

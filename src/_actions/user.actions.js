@@ -47,7 +47,8 @@ function register(user) {
             .then(
                 user => {
                     dispatch(success());
-                    history.push('/signup');
+                    history.push('/signin');
+                    window.location.reload();
                     dispatch(alertActions.success('Registration successful'));
                 },
                 error => {

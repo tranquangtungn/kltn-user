@@ -10,7 +10,7 @@
 
 .outer {
     display: flex;
-    justify-content: center !important;
+    justify-content: center;
     flex-direction: column;
     text-align: left;
 }
@@ -19,6 +19,7 @@
     width: 450px;
     margin: auto;
     margin-bottom: 100px;
+    margin-top: 0px;
     background: #ffffff;
     box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
     padding: 40px 55px 45px 55px;
@@ -30,7 +31,9 @@
     border-color: #167bff;
     box-shadow: none;
 }
-
+.outer .form-control {
+    width: 340px;
+}
 .outer h3 {
     color: black;
     font-weight: bold;
@@ -46,9 +49,10 @@
     padding: 20;
     color: black;
 }
-.date-control {
-    font-size: medium;
+.gender-control {
+    color: black;
 }
+
 .forgot-password,
 .forgot-password a {
     text-align: right;
