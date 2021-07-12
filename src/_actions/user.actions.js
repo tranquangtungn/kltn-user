@@ -19,8 +19,8 @@ function loginFb(user) {
             .then(
                 user => {
                     dispatch(success());
-                    // history.push('/signin');
-                    // window.location.reload();
+                    history.push('/');
+                    window.location.reload();
                     dispatch(alertActions.success('Registration successful'));
                 },
                 error => {
