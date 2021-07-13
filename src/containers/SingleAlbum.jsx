@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import fetchAlbumAction from "../api/fetchSingleAlbum";
 
-import convertDurationTrack from "../core/functions/convertDurationTrack";
+// import convertDurationTrack from "../core/functions/convertDurationTrack";
 import convertDurationAlbum from "../core/functions/convertDurationAlbum";
 import convertNumber from "../core/functions/convertNumber";
 import addProperty from "../core/functions/addProperty";

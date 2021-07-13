@@ -1,7 +1,7 @@
 import React from "react";
 import "./CardSong.css";
 
-import convertDurationTrack from "../../core/functions/convertDurationTrack";
+// import convertDurationTrack from "../../core/functions/convertDurationTrack";
 import PlayButton from "../Buttons/PlayButton";
 import HeartButton from "../Buttons/HeartButton";
 
