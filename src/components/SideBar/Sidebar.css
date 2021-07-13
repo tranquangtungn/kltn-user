@@ -1,6 +1,6 @@
 .container {
     grid-area: sidebar;
-    padding: 50px 32px;
+    padding: 0px 32px;
     background: var(--background-accent-color);
     min-width: 150px;
     max-width: 200px;
@@ -17,7 +17,26 @@
     cursor: pointer;
     color: rgba(255, 255, 255, 0.6);
 }
-
+.title-sidebar {
+    font-size: 25px;
+    padding-top: 0px;
+    /* margin-left: 10px; */
+    font-weight: bold;
+    color: #0d6efd;
+    text-decoration: none;
+}
+.title-sidebar p {
+    color: #0d6efd;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.active .title-sidebar h2 {
+    color: red;
+}
+.title-sidebar .h2 {
+    padding-top: 10px;
+    margin-top: 10px;
+}
 .container .item span {
     margin-left: 12px;
 }

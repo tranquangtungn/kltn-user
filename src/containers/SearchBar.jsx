@@ -50,7 +50,7 @@ class SearchBar extends Component {
   }
 
   render() {
-    // let user = localStorage.getItem('user');
+    let user = localStorage.getItem('user');
     // this.setState({ user: user });
     // console.log(this.state); 
     window.addEventListener("click", function (e) {
@@ -78,7 +78,13 @@ class SearchBar extends Component {
               onChange={this.handleChange}
             />
           </form>
-          <Link to="/signin" className="btn-signin"> Sign in</Link>
+          {!user &&
+            <Link to="/signin" className="btn-signin"> Sign in</Link>
+          }
+          {user &&
+            <Link to="/signin" className="btn-signin"> Sign out</Link>
+
+          }
 
         </div>
       );

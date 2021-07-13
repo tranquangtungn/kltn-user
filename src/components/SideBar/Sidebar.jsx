@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import ToogleTheme from "../../components/Buttons/Toggle";
 import {
   faHome,
@@ -13,7 +13,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Sidebar = () => {
   return (
     <div className="container">
+
+      <Link className="title-sidebar" exact to="/" activeClassName="active">
+        <p>Music
+          Discovery</p>
+      </Link>
       <section className="sidebar-topics">
+
+
         <ToogleTheme />
         <NavLink exact to="/" className="item" activeClassName="active">
           <span>Home</span>
