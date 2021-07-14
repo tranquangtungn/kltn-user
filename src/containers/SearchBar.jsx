@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faSearch } from "@fortawesome/free-solid-svg-icons";
-
+import UserInfo from "../components/UserInfo/UserInfo";
 import fetchSearchArtistAction from "../api/fetchSearchArtists";
 import fetchSearchAlbumsAction from "../api/fetchSearchAlbums";
 import fetchSearchTracksAction from "../api/fetchSearchTracks";
@@ -20,8 +20,12 @@ class SearchBar extends Component {
     // this.setState({ user: user });
     this.handleChange = this.handleChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.runMyFunction = this.runMyFunction.bind(this);
   }
-
+  componentDidMount() {
+    let user = localStorage.getItem('user')
+    this.setState({ user: user });
+  }
   handleSearch(e) {
     e.preventDefault();
     const { searchArtists, searchAlbums, searchTracks } = this.props;
@@ -31,7 +35,10 @@ class SearchBar extends Component {
       searchTracks(this.state.query);
     }
   }
-
+  runMyFunction() {
+    //code
+    return true;
+  }
   handleChange(e) {
     let query = e.target.value;
     this.setState({ query: query });
@@ -50,7 +57,7 @@ class SearchBar extends Component {
   }
 
   render() {
-    let user = localStorage.getItem('user');
+
     // this.setState({ user: user });
     // console.log(this.state); 
     window.addEventListener("click", function (e) {
@@ -78,11 +85,12 @@ class SearchBar extends Component {
               onChange={this.handleChange}
             />
           </form>
-          {!user &&
+          {!this.state.user &&
             <Link to="/signin" className="btn-signin"> Sign in</Link>
+
           }
-          {user &&
-            <Link to="/signin" className="btn-signin"> Sign out</Link>
+          {this.state.user &&
+            <UserInfo />
 
           }
 
@@ -103,7 +111,14 @@ class SearchBar extends Component {
             songsFound={foundTracks}
           />
         </form>
-        <Link to="/signin" className="btn-signin"> Sign in</Link>
+        {!this.state.user &&
+          <Link to="/signin" className="btn-signin"> Sign in</Link>
+        }
+        {this.state.user &&
+          <UserInfo />
+
+        }
+
       </div>
     );
   }

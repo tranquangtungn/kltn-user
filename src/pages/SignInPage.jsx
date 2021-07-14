@@ -9,7 +9,7 @@ import GoogleLogin from 'react-google-login';
 class SignInPage extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props)
+
     // reset login status
     this.props.logout();
 
