@@ -47,7 +47,8 @@
 /* Start Search Bar */
 
 .search-container {
-    background: var(--background-search-color);
+    /* background: var(--background-search-color); */
+    background: var(--background-accent-color);
     grid-area: search-bar;
     display: flex;
     justify-content: space-between;
