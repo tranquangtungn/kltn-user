@@ -30,6 +30,7 @@ export default function UserInfo() {
                             <a href="/signin">Sign out</a>
                         </li>
 
+
                     </ul>
                 </nav>
             </div>
