@@ -6,7 +6,8 @@
 }
 
 .menu-trigger {
-    background: #ffffff;
+    background: transparent;
+    color: var(--text-color);
     border-radius: 90px;
     cursor: pointer;
     display: flex;
