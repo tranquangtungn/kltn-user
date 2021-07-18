@@ -14,9 +14,8 @@ const Sidebar = () => {
   return (
     <div className="container">
 
-      <Link className="title-sidebar" exact to="/" activeClassName="active">
-        <p>Music
-          Discovery</p>
+      <Link className="title-sidebar" exact to="/" activeClassName="active" style={{textAlign:'center'}}>
+        <p>Music Discovery</p>
       </Link>
       <section className="sidebar-topics">
 
