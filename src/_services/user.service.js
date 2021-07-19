@@ -77,13 +77,13 @@ function getAll() {
     return fetch(`/users`, requestOptions).then(handleResponse);
 }
 
-function getById(id) {
+function getById() {
     const requestOptions = {
         method: 'GET',
         headers: authHeader()
     };
 
-    return fetch(`/users/${id}`, requestOptions).then(handleResponse);
+    return fetch(`/users/my-profile`, requestOptions).then(handleResponse);
 }
 
 function register(user) {

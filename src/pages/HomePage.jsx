@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 import { userActions } from '../_actions';
 class HomePage extends Component {
   componentDidMount() {
-    this.props.getUsers();
+    // this.props.getUsers();
   }
   render() {
     // const { user } = this.props;
