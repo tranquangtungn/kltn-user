@@ -83,7 +83,11 @@ function getById() {
         headers: authHeader()
     };
 
-    return fetch(`/users/my-profile`, requestOptions).then(handleResponse);
+    return fetch(`/users/my-profile`, requestOptions).then(handleResponse)
+        .then(users => {
+            localStorage.setItem('avatar', JSON.stringify(users.items.avatar));
+            return users;
+        });
 }
 
 function register(user) {
@@ -119,16 +123,16 @@ function _delete(id) {
 function handleResponse(response) {
     return response.text().then(text => {
         const data = text && JSON.parse(text);
-        if (!response.ok) {
-            if (response.status === 401) {
-                // auto logout if 401 response returned from api
-                logout();
-                // location.reload(true);
-            }
+        // if (!response.ok) {
+        //     if (response.status === 401) {
+        //         // auto logout if 401 response returned from api
+        //         logout();
+        //         // location.reload(true);
+        //     }
 
-            const error = (data && data.message) || response.statusText;
-            return Promise.reject(error);
-        }
+        //     const error = (data && data.message) || response.statusText;
+        //     return Promise.reject(error);
+        // }
 
         return data;
     });

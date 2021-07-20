@@ -76,7 +76,7 @@ class SearchBar extends Component {
     } = this.props;
     if (loadingArtists || loadingAlbums || loadingTracks)
       return (
-        <div className="search-container" style={{height:'55px'}}>
+        <div className="search-container" style={{ height: '75px' }}>
           <form onSubmit={this.handleSearch}>
             {/* <FontAwesomeIcon className="icon-search" size="40px" icon={faSearch} /> */}
             <input

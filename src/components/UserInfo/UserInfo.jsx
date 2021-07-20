@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import "./UserInfo.css";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
 import { userActions } from '../../_actions';
-import ItemResult from "components/SearchResults/ItemResult";
+// import ItemResult from "components/SearchResults/ItemResult";
 /*
  * Read the blog post here:
  * https://letsbuildui.dev/articles/building-a-dropdown-menu-component-with-react-hooks
@@ -12,7 +12,7 @@ export default function UserInfo() {
     const dropdownRef = useRef(null);
     const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
     const onClick = () => setIsActive(!isActive);
-    const [user] = useState(useSelector(state => state));
+    const [user] = useState("." + localStorage.getItem("avatar"));
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -22,12 +22,12 @@ export default function UserInfo() {
         <div >
             <div className="menu-container">
                 <button onClick={onClick} className="menu-trigger">
-                    <span>User</span>
+                    <span>Tung Tran</span>
                     <img
-                        src={user?.items?.avatar}
+                        src="https://103.81.84.103/images/1626121793img.png"
                         alt="User avatar"
                     />
-                    {console.log(user.users)}
+                    {console.log(user)}
                 </button>
                 <nav
                     ref={dropdownRef}
