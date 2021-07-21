@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import "./UserInfo.css";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
 import { userActions } from '../../_actions';

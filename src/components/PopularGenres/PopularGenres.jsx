@@ -11,7 +11,7 @@ const PopularGenres = () => {
           {/* <img src="../../assets/popular-genres.jpeg" alt="hip hop latino" /> */}
         </div>
         <h2 className="title">
-          Hip Hop <span>Latino</span>
+          Hip Hop <span>Nhạc trẻ</span>
         </h2>
       </Link>
     </div>

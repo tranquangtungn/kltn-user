@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import fetchArtistAction from "../api/fecthSingleArtist";
-import convertNumber from "../core/functions/convertNumber";
+// import convertNumber from "../core/functions/convertNumber";
 
 import Loading from "../components/Loading/Loading";
 import FollowButton from "../components/Buttons/FollowButton";

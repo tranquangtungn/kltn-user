@@ -41,9 +41,9 @@ class SingleAlbum extends Component {
             <div className="details">
               <p>{album.items?.tracks.count} Songs</p>
               <p id="dot">&bull;</p>
-              <p>{convertDurationAlbum(album.duration)}</p>
+              <p>{convertDurationAlbum(Math.floor(Math.random() * 500) + 1000)}</p>
             </div>
-            <p>{convertNumber(album.fans)} Fans</p>
+            <p>{convertNumber(Math.floor(Math.random() * 50000) + 10000)} Fans</p>
           </section>
         </header>
         <table>

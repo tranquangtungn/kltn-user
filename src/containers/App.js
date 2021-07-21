@@ -27,7 +27,7 @@ import store from "../state/store";
 import FavoriteMobilePage from "../pages/FavoritesMobilePage";
 
 import "./App.css";
-import PlayTrack from "./PlayTracks";
+// import PlayTrack from "./PlayTracks";
 import SignUpPage from "pages/SignUpPage";
 import SignInPage from "pages/SignInPage";
 import ForgotPasswordPage from "pages/ForgotPasswordPage";
