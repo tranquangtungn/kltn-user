@@ -31,7 +31,7 @@ class Title extends Component {
         <img src={artist.items.avatar} alt={artist.items.name} />
         <div className="artist-info">
           <h1>{artist.items.name}</h1>
-          <p>{convertNumber(artist.items.totalLike)} Fans</p>
+          <p>{Math.floor(Math.random() * 50000) + 10000} Fans</p>
           <FollowButton artist={artist.items} />
         </div>
       </div>

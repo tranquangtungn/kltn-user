@@ -76,7 +76,7 @@ class RelatedArtists extends Component {
         <section>
           <div className="slider">
             <div className="items-slider" id="carousel-related">
-              {related.items?.map((artist) => (
+              {related.items?.slice(0, 6).map((artist) => (
                 <Card key={artist._id} artist={artist} />
               ))}
             </div>

@@ -23,7 +23,7 @@ class ChartArtists extends Component {
           {error && <span>{error}</span>}
           <h1>Featured Artists</h1>
           <div className="featured-artists">
-            {artists?.items.map((artist) => (
+            {artists?.items.slice(0, 10).map((artist) => (
               <Card key={artist._id} artist={artist} />
             ))}
           </div>
@@ -35,7 +35,7 @@ class ChartArtists extends Component {
 
 const mapStateToProps = (state) => ({
   error: state.topSingers.error,
-  artists: state.topSingers.artists,
+  artists: state.topSingers.singers,
   loading: state.topSingers.loading,
 });
 

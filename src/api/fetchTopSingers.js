@@ -8,7 +8,7 @@ import {
 export default function fetchTopSinger() {
     return (dispatch) => {
         dispatch(actionTopSingersPending());
-        fetch("/singers/top-trend")
+        fetch("/singers/get-list")
             // fetch("/chart")
             .then((res) => res.json())
             .then((res) => {

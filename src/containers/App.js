@@ -82,7 +82,7 @@ function App() {
 
             <Route component={Error} />
           </Switch>
-          <PlayTrack />
+          {/* <PlayTrack /> */}
         </Provider>
 
       </div>

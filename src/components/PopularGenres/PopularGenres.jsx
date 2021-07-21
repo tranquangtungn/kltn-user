@@ -6,7 +6,7 @@ const PopularGenres = () => {
   return (
     <div className="container-popular">
       <h1>Popular</h1>
-      <Link to="/genre/60cf06a031946f060d53eaa9">
+      <Link to="/genre/60ea86952cd5641f8a3f48dd">
         <div className="container-images">
           {/* <img src="../../assets/popular-genres.jpeg" alt="hip hop latino" /> */}
         </div>
