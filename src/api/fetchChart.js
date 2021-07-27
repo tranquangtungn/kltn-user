@@ -8,7 +8,7 @@ import {
 export default function fetchTopTracks() {
     return (dispatch) => {
         dispatch(actionTopTracksPending());
-        fetch("/tracks/top-music")
+        fetch("/tracks/top-trending")
             // fetch("/chart")
             .then((res) => res.json())
             .then((res) => {

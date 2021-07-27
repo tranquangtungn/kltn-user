@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import "./UserInfo.css";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
@@ -12,7 +12,7 @@ export default function UserInfo() {
     const dropdownRef = useRef(null);
     const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
     const onClick = () => setIsActive(!isActive);
-    const [user] = useState("." + localStorage.getItem("avatar"));
+    const user = JSON.parse(localStorage.getItem("user-info"));
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -22,9 +22,10 @@ export default function UserInfo() {
         <div >
             <div className="menu-container">
                 <button onClick={onClick} className="menu-trigger">
-                    <span>Tung Tran</span>
+                    <span>{`${user.lastname} ${user.firstname}`}</span>
                     <img
-                        src="https://103.81.84.103/images/1626121793img.png"
+                        className="user-avt"
+                        src={user.avatar}
                         alt="User avatar"
                     />
                     {console.log(user)}

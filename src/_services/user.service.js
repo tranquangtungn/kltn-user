@@ -85,8 +85,8 @@ function getById() {
 
     return fetch(`/users/my-profile`, requestOptions).then(handleResponse)
         .then(users => {
-            localStorage.setItem('avatar', JSON.stringify(users.items.avatar));
-            return users;
+            localStorage.setItem('user-info', JSON.stringify(users.items));
+            return users.items;
         });
 }
 
