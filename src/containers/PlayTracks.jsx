@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 
 import AudioPlayer from 'react-playlist-player'
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+
+import fetchTopTracksAction from "../api/fetchChart";
 
 class PlayTrack extends Component {
     state = {
@@ -10,24 +14,24 @@ class PlayTrack extends Component {
     loadPlayList = () =>
         this.setState({
             currentPlayList: {
-                playlistCoverUrl: 'path/to/coverUrl',
-                playlistName: 'playlist name',
-                bandName: 'band name',
+                playlistCoverUrl: 'images/1624180384latino.jpg',
+                playlistName: 'top trend',
+                bandName: 'top trend 2021',
                 songs: [
                     {
                         position: '1',
                         songName: 'foo',
-                        songUrl: 'path/to/songUrl'
+                        songUrl: '/tracks/play/60fbb661c27aeb0c014b08b0'
                     },
                     {
                         position: '2',
                         songName: 'bar',
-                        songUrl: 'path/to/songUrl'
+                        songUrl: '/tracks/play/60f918c6c27aeb0c014b0570'
                     },
                     {
                         position: '3',
                         songName: 'baz',
-                        songUrl: 'path/to/songUrl'
+                        songUrl: '/tracks/play/60f50b88c27aeb0c014ada28'
                     }
                 ],
                 type: 'album'
@@ -43,5 +47,19 @@ class PlayTrack extends Component {
         )
     }
 }
+const mapStateToProps = (state) => ({
+    error: state.topTracks.error,
+    tracks: state.topTracks.tracks,
+    loading: state.topTracks.loading,
+});
 
-export default PlayTrack;
+
+const mapDispatchToProps = (dispatch) =>
+    bindActionCreators(
+        {
+            fetchTopTracks: fetchTopTracksAction,
+        },
+        dispatch
+    );
+
+export default connect(mapStateToProps, mapDispatchToProps)(PlayTrack);

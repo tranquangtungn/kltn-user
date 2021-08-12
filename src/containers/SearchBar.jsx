@@ -11,6 +11,7 @@ import fetchSearchTracksAction from "../api/fetchSearchTracks";
 
 import HintResults from "../components/SearchResults/HintResults";
 
+
 import "./SearchBar.css"
 class SearchBar extends Component {
   constructor(props) {
@@ -94,6 +95,8 @@ class SearchBar extends Component {
 
           }
 
+
+
         </div>
       );
     return (
@@ -118,7 +121,7 @@ class SearchBar extends Component {
           <UserInfo />
 
         }
-
+        {/* <VoiceSearch /> */}
       </div>
     );
   }

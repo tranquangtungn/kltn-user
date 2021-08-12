@@ -14,7 +14,7 @@ const Sidebar = () => {
   return (
     <div className="container">
 
-      <Link className="title-sidebar" exact to="/" activeClassName="active" style={{textAlign:'center'}}>
+      <Link className="title-sidebar" exact to="/" activeClassName="active" style={{ textAlign: 'center' }}>
         <p>Music Discovery</p>
       </Link>
       <section className="sidebar-topics">
@@ -33,18 +33,15 @@ const Sidebar = () => {
           <span>Radio</span>
         </NavLink> */}
 
-        <NavLink exact to="/foryou" className="item" activeClassName="active">
+        {/* <NavLink exact to="/foryou" className="item" activeClassName="active">
           <span>For you</span>
-        </NavLink>
+        </NavLink> */}
       </section>
 
       {/* your library */}
       <section className="sidebar-library">
         <h4>Your Library</h4>
-        <NavLink exact to="/albums" className="item" activeClassName="active">
-          {/* <FontAwesomeIcon className="icon" icon={faUser} /> */}
-          <span>Albums</span>
-        </NavLink>
+
 
         <NavLink exact to="/artists" className="item" activeClassName="active">
           {/* <FontAwesomeIcon className="icon" icon={faUser} /> */}
@@ -56,15 +53,7 @@ const Sidebar = () => {
           <span>Songs</span>
         </NavLink>
 
-        <NavLink
-          exact
-          to="/playlists"
-          className="item"
-          activeClassName="active"
-        >
-          {/* <FontAwesomeIcon className="icon" icon={faMusic} /> */}
-          <span>Playlists</span>
-        </NavLink>
+
       </section>
 
       {/* Footer on mobile */}
